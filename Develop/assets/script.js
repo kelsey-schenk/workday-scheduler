@@ -1,15 +1,5 @@
-// Adding a function without naming it
-// $(document).ready (function() {
-    $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-    // Checks what time it is every 30 seconds
-    
-    
-    //colorCode()
-    //var hourCheck = setInterval(colorCode, 60000);
-// })
+$('#currentDay').text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
-//function colorCode() {
-    debugger;
     let currentTime = moment().hour();
     $('.description').each(function(){
         // parseInt = look in the string for an integer
@@ -24,3 +14,4 @@
         }
     });
     console.log(currentTime);
+
