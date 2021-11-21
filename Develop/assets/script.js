@@ -15,3 +15,15 @@ $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     });
     console.log(currentTime);
 
+$('.saveBtn').on("click", function(){
+    var thisBtn = $(this);
+    var parentDiv = thisBtn.parent();
+    var textarea = parentDiv.find("textarea");
+    var value = textarea.val();
+    var key = textarea.attr("id");
+    localStorage.setItem(key,value);
+})
+
+for(var hour = 9; hour < 18; hour++) {
+    $("#" + hour).val(localStorage.getItem(hour));
+}
